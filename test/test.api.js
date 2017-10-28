@@ -1006,7 +1006,7 @@ DRIVERS.forEach(function(driverName) {
         return Promise.resolve();
     }
 
-    describe(driverName + ' driver multiple instances', function() {
+    describe.skip(driverName + ' driver multiple instances', function() {
         'use strict';
 
         this.timeout(30000);
@@ -1112,7 +1112,7 @@ DRIVERS.forEach(function(driverName) {
     });
 
     // Refers to issue #492 - https://github.com/mozilla/localForage/issues/492
-    describe(driverName + ' driver multiple instances (concurrent on same database)', function() {
+    describe.skip(driverName + ' driver multiple instances (concurrent on same database)', function() {
 
         'use strict';
 
@@ -1455,7 +1455,7 @@ DRIVERS.forEach(function(driverName) {
         });
     });
 
-    describe(driverName + ' driver when ready() gets rejected', function() {
+    describe.skip(driverName + ' driver when ready() gets rejected', function() {
         'use strict';
 
         this.timeout(30000);
@@ -1487,7 +1487,7 @@ DRIVERS.forEach(function(driverName) {
 });
 
 DRIVERS.forEach(function(driverName) {
-    describe(driverName + ' driver instance', function() {
+    describe.skip(driverName + ' driver instance', function() {
         it('creates a new instance and sets the driver', function(done) {
             var localforage2 = localforage.createInstance({
                 name: 'storage2',
