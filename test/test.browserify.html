@@ -27,6 +27,11 @@
     <script src="/test/test.drivers.js"></script>
     <script src="/test/test.iframes.js"></script>
     <script src="/test/test.webworkers.js"></script>
+<!-- FIXME: in the browserify test, it's necessary to put taskbatching tests before taskqueueing tests> -->
+    <script src="/test/test.taskbatching.js"></script>
+    <script src="/test/test.taskqueueing.js"></script>
+    <script src="/test/test.taskexecution.js"></script>
+
   </head>
   <body>
     <div id="mocha"></div>
