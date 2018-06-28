@@ -1,5 +1,5 @@
 {
-  "presets": ["es2015-loose"],
+  "presets": ["env"],
   "plugins": [
     "add-module-exports"
   ]
