@@ -1,4 +1,5 @@
 var path = require('path');
+var serveStatic = require('serve-static');
 var saucelabsBrowsers = require(path.resolve('test', 'saucelabs-browsers.js'));
 
 var sourceFiles = [
@@ -105,7 +106,7 @@ module.exports = exports = function(grunt) {
                     base: '.',
                     hostname: '*',
                     port: 9999,
-                    middleware: function(connect) {
+                    middleware: function() {
                         return [
                             function(req, res, next) {
                                 res.setHeader('Access-Control-Allow-Origin',
@@ -115,7 +116,7 @@ module.exports = exports = function(grunt) {
 
                                 return next();
                             },
-                            connect.static(require('path').resolve('.'))
+                            serveStatic(require('path').resolve('.'))
                         ];
                     }
                 }
